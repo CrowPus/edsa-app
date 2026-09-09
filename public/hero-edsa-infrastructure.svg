@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#060F1E"/>
+      <stop offset="45%" stop-color="#0A1931"/>
+      <stop offset="85%" stop-color="#122B54"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+
+    <!-- Sun / Glow Gradient -->
+    <radialGradient id="sunGlow" cx="50%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#D32F2F" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0A1931" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Energy Pulse Linear Gradient -->
+    <linearGradient id="energyBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Mountain Gradient -->
+    <linearGradient id="mountGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#13233F"/>
+      <stop offset="100%" stop-color="#08101E"/>
+    </linearGradient>
+    <linearGradient id="mountGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3256"/>
+      <stop offset="100%" stop-color="#0A1526"/>
+    </linearGradient>
+
+    <!-- Substation Metal Gradients -->
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    
+    <linearGradient id="solarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    
+    <!-- Grid Pattern -->
+    <pattern id="telemetryGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38BDF8" stroke-width="0.5" stroke-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="750" fill="url(#skyGrad)"/>
+  <rect width="1200" height="750" fill="url(#sunGlow)"/>
+  
+  <!-- Digital Telemetry Grid in Sky -->
+  <rect width="1200" height="500" fill="url(#telemetryGrid)"/>
+
+  <!-- Stars / Digital Data Nodes in Night Sky -->
+  <g fill="#93C5FD" opacity="0.6">
+    <circle cx="120" cy="80" r="1.5"/>
+    <circle cx="280" cy="60" r="1"/>
+    <circle cx="450" cy="110" r="2"/>
+    <circle cx="680" cy="70" r="1.5"/>
+    <circle cx="820" cy="90" r="2"/>
+    <circle cx="950" cy="50" r="1"/>
+    <circle cx="1080" cy="120" r="2"/>
+    <circle cx="150" cy="190" r="1"/>
+    <circle cx="730" cy="160" r="1.5"/>
+    <circle cx="890" cy="180" r="1"/>
+  </g>
+
+  <!-- Distant Sierra Leone Topography (Freetown Peninsula / Bumbuna Hills) -->
+  <path d="M 0 480 Q 200 410 400 440 T 800 420 Q 1000 390 1200 460 L 1200 750 L 0 750 Z" fill="url(#mountGrad1)" opacity="0.8"/>
+  <path d="M 0 510 Q 300 450 600 480 T 1200 490 L 1200 750 L 0 750 Z" fill="url(#mountGrad2)"/>
+
+  <!-- Ground Plane (Substation Base) -->
+  <rect x="0" y="550" width="1200" height="200" fill="#0B1322"/>
+  <line x1="0" y1="550" x2="1200" y2="550" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- High-Voltage CLSG Transmission Lines (Span across the sky) -->
+  <!-- Line 1 -->
+  <path d="M 0 220 Q 300 320 600 240 T 1200 210" fill="none" stroke="#E2E8F0" stroke-width="1.8" opacity="0.75"/>
+  <path d="M 0 240 Q 300 340 600 260 T 1200 230" fill="none" stroke="#E2E8F0" stroke-width="1.8" opacity="0.75"/>
+  <path d="M 0 260 Q 300 360 600 280 T 1200 250" fill="none" stroke="#E2E8F0" stroke-width="1.8" opacity="0.75"/>
+  
+  <!-- Glowing Telemetry Power Flow Line -->
+  <path d="M 0 220 Q 300 320 600 240 T 1200 210" fill="none" stroke="#38BDF8" stroke-width="3" stroke-dasharray="15 30" opacity="0.9"/>
+  <path d="M 0 240 Q 300 340 600 260 T 1200 230" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="25 40" opacity="0.85"/>
+
+  <!-- Distant Background Transmission Pylon (Left) -->
+  <g transform="translate(180, 240) scale(0.65)" stroke="#64748B" stroke-width="2.5" fill="none">
+    <!-- Pylon Legs -->
+    <line x1="40" y1="0" x2="0" y2="400"/>
+    <line x1="60" y1="0" x2="100" y2="400"/>
+    <!-- Crossarms -->
+    <line x1="-30" y1="60" x2="130" y2="60"/>
+    <line x1="-40" y1="130" x2="140" y2="130"/>
+    <line x1="-20" y1="200" x2="120" y2="200"/>
+    <!-- Cross Bracing -->
+    <line x1="30" y1="60" x2="70" y2="130"/>
+    <line x1="70" y1="60" x2="30" y2="130"/>
+    <line x1="20" y1="130" x2="80" y2="200"/>
+    <line x1="80" y1="130" x2="20" y2="200"/>
+    <line x1="10" y1="200" x2="90" y2="300"/>
+    <line x1="90" y1="200" x2="10" y2="300"/>
+  </g>
+
+  <!-- Distant Background Transmission Pylon (Right) -->
+  <g transform="translate(980, 230) scale(0.7)" stroke="#64748B" stroke-width="2.5" fill="none">
+    <line x1="40" y1="0" x2="0" y2="400"/>
+    <line x1="60" y1="0" x2="100" y2="400"/>
+    <line x1="-30" y1="60" x2="130" y2="60"/>
+    <line x1="-40" y1="130" x2="140" y2="130"/>
+    <line x1="-20" y1="200" x2="120" y2="200"/>
+    <line x1="30" y1="60" x2="70" y2="130"/>
+    <line x1="70" y1="60" x2="30" y2="130"/>
+    <line x1="20" y1="130" x2="80" y2="200"/>
+    <line x1="80" y1="130" x2="20" y2="200"/>
+  </g>
+
+  <!-- MAIN FOREGROUND 225kV TRANSMISSION TOWER (Center-Left) -->
+  <g transform="translate(520, 110)" stroke="#94A3B8" stroke-width="3" fill="none">
+    <!-- Peak / Earth wire peak -->
+    <polygon points="80,0 70,60 90,60" fill="#475569" stroke="#CBD5E1"/>
+    
+    <!-- Top Crossarm (Narrow) -->
+    <line x1="-40" y1="80" x2="200" y2="80" stroke="#CBD5E1" stroke-width="4"/>
+    <line x1="-40" y1="80" x2="70" y2="40"/>
+    <line x1="200" y1="80" x2="90" y2="40"/>
+    <!-- Insulators -->
+    <rect x="-35" y="80" width="6" height="35" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+    <rect x="189" y="80" width="6" height="35" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+
+    <!-- Middle Crossarm (Widest) -->
+    <line x1="-80" y1="170" x2="240" y2="170" stroke="#CBD5E1" stroke-width="4"/>
+    <line x1="-80" y1="170" x2="60" y2="120"/>
+    <line x1="240" y1="170" x2="100" y2="120"/>
+    <!-- Insulators -->
+    <rect x="-75" y="170" width="6" height="40" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+    <rect x="229" y="170" width="6" height="40" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+
+    <!-- Bottom Crossarm -->
+    <line x1="-50" y1="260" x2="210" y2="260" stroke="#CBD5E1" stroke-width="4"/>
+    <line x1="-50" y1="260" x2="50" y2="200"/>
+    <line x1="210" y1="260" x2="110" y2="200"/>
+    <!-- Insulators -->
+    <rect x="-45" y="260" width="6" height="35" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+    <rect x="199" y="260" width="6" height="35" fill="#38BDF8" stroke="#0284C7" stroke-width="1"/>
+
+    <!-- Main Tower Body Truss Structure -->
+    <line x1="70" y1="60" x2="10" y2="460" stroke="#CBD5E1" stroke-width="4"/>
+    <line x1="90" y1="60" x2="150" y2="460" stroke="#CBD5E1" stroke-width="4"/>
+
+    <!-- Diagonal Braces -->
+    <line x1="68" y1="80" x2="92" y2="120"/>
+    <line x1="92" y1="80" x2="68" y2="120"/>
+    
+    <line x1="60" y1="170" x2="100" y2="220"/>
+    <line x1="100" y1="170" x2="60" y2="220"/>
+
+    <line x1="50" y1="260" x2="110" y2="330"/>
+    <line x1="110" y1="260" x2="50" y2="330"/>
+
+    <line x1="30" y1="330" x2="130" y2="410"/>
+    <line x1="130" y1="330" x2="30" y2="410"/>
+
+    <!-- Base Horizontal Bars -->
+    <line x1="50" y1="260" x2="110" y2="260"/>
+    <line x1="30" y1="330" x2="130" y2="330"/>
+    <line x1="10" y1="410" x2="150" y2="410"/>
+  </g>
+
+  <!-- SUBSTATION TRANSFORMER UNITS (Foreground Right) -->
+  <g transform="translate(820, 470)">
+    <!-- Substation Base Pad -->
+    <rect x="0" y="80" width="320" height="25" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    
+    <!-- Transformer Core Tank 1 -->
+    <rect x="20" y="10" width="110" height="75" fill="url(#metalGrad)" stroke="#64748B" stroke-width="2"/>
+    <!-- Radiator Fins -->
+    <line x1="30" y1="15" x2="30" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="45" y1="15" x2="45" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="60" y1="15" x2="60" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="75" y1="15" x2="75" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="90" y1="15" x2="90" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="105" y1="15" x2="105" y2="80" stroke="#1E293B" stroke-width="3"/>
+    
+    <!-- Bushings / Insulators on Top -->
+    <polygon points="35,10 40,-20 45,10" fill="#93C5FD" stroke="#38BDF8"/>
+    <polygon points="70,10 75,-25 80,10" fill="#93C5FD" stroke="#38BDF8"/>
+    <polygon points="105,10 110,-20 115,10" fill="#93C5FD" stroke="#38BDF8"/>
+
+    <!-- Surge Arresters -->
+    <line x1="40" y1="-20" x2="40" y2="-40" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="40" cy="-40" r="3" fill="#F59E0B"/>
+    <line x1="75" y1="-25" x2="75" y2="-50" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="75" cy="-50" r="3" fill="#F59E0B"/>
+    <line x1="110" y1="-20" x2="110" y2="-40" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="110" cy="-40" r="3" fill="#F59E0B"/>
+
+    <!-- Transformer Core Tank 2 (Secondary Bank) -->
+    <rect x="170" y="25" width="120" height="60" fill="url(#metalGrad)" stroke="#64748B" stroke-width="2"/>
+    <line x1="185" y1="30" x2="185" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="205" y1="30" x2="205" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="225" y1="30" x2="225" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="245" y1="30" x2="245" y2="80" stroke="#1E293B" stroke-width="3"/>
+    <line x1="265" y1="30" x2="265" y2="80" stroke="#1E293B" stroke-width="3"/>
+
+    <!-- Oil Conservator Drum -->
+    <rect x="180" y="0" width="70" height="20" rx="6" fill="#475569" stroke="#94A3B8" stroke-width="2"/>
+  </g>
+
+  <!-- SOLAR PHOTOVOLTAIC ARRAY (Foreground Left - Rural Integration) -->
+  <g transform="translate(60, 520)">
+    <!-- Row 1 -->
+    <polygon points="20,40 140,25 240,40 120,60" fill="url(#solarGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <polygon points="150,24 270,10 370,24 250,42" fill="url(#solarGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <!-- Row 2 -->
+    <polygon points="10,80 130,62 230,80 110,102" fill="url(#solarGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <polygon points="140,61 260,45 360,61 240,82" fill="url(#solarGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <!-- Stands -->
+    <line x1="120" y1="60" x2="120" y2="85" stroke="#64748B" stroke-width="2"/>
+    <line x1="240" y1="40" x2="240" y2="70" stroke="#64748B" stroke-width="2"/>
+    <line x1="110" y1="102" x2="110" y2="125" stroke="#64748B" stroke-width="2"/>
+    <line x1="240" y1="82" x2="240" y2="110" stroke="#64748B" stroke-width="2"/>
+  </g>
+
+  <!-- SCADA Telemetry & Control Tower (Center Right) -->
+  <g transform="translate(420, 420)" stroke="#64748B" stroke-width="2" fill="none">
+    <!-- Lattice Telemetry Pole -->
+    <line x1="20" y1="0" x2="10" y2="150" stroke="#CBD5E1"/>
+    <line x1="20" y1="0" x2="30" y2="150" stroke="#CBD5E1"/>
+    <line x1="13" y1="30" x2="27" y2="30"/>
+    <line x1="11" y1="70" x2="29" y2="70"/>
+    <line x1="10" y1="110" x2="30" y2="110"/>
+    <!-- Dish -->
+    <path d="M 5 -10 Q 20 -25 35 -10" fill="none" stroke="#F8FAFC" stroke-width="3"/>
+    <line x1="20" y1="-17" x2="20" y2="-5" stroke="#F8FAFC" stroke-width="2"/>
+    <!-- Pulse Waves -->
+    <path d="M 5 -25 Q 20 -38 35 -25" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4" opacity="0.8"/>
+    <path d="M -5 -38 Q 20 -55 45 -38" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4" opacity="0.5"/>
+  </g>
+
+  <!-- INFRASTRUCTURE BADGE / TECHNICAL OVERLAY -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="340" height="70" fill="#060F1E" fill-opacity="0.85" stroke="#1E3A8A" stroke-width="1.5"/>
+    <rect x="0" y="0" width="6" height="70" fill="#D32F2F"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14" letter-spacing="1">
+      EDSA NATIONAL POWER GRID
+    </text>
+    <text x="20" y="48" fill="#38BDF8" font-family="monospace" font-size="11">
+      225kV CLSG INTERCONNECTION &amp; SCADA
+    </text>
+    <circle cx="315" cy="35" r="5" fill="#10B981"/>
+    <circle cx="315" cy="35" r="9" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Status Bar at Bottom -->
+  <g transform="translate(40, 685)">
+    <rect x="0" y="0" width="1120" height="35" fill="#0A1931" fill-opacity="0.9" stroke="#1E293B" stroke-width="1"/>
+    <text x="15" y="22" fill="#94A3B8" font-family="monospace" font-size="11">
+      GRID FREQUENCY: 50.02 Hz  |  DISPATCH STATUS: NORMAL  |  BUMBUNA HYDRO: ACTIVE  |  CLSG TIE-LINE: SYNCHRONIZED
+    </text>
+    <text x="960" y="22" fill="#10B981" font-family="monospace" font-weight="700" font-size="11">
+      ● 99.4% TELEMETRY
+    </text>
+  </g>
+</svg>
